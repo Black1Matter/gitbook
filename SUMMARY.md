@@ -1,4 +1,4 @@
 # Table of contents
 
-* [MAINNET](README.md)
+* MAINNET
   * [Axelar](MAINNET/Axelar/Snapshot.md)
