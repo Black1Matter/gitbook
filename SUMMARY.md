@@ -4,4 +4,4 @@
 
 ## MAINNET
 
-* [Axelar](mainnet/axelar.md)
+* [Axelar](mainnet/Axelar/axelar.md)
