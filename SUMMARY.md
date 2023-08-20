@@ -4,4 +4,5 @@
 
 ## MAINNET
 
+* [Agoric](mainnet/Agoric/agoric.md)
 * [Axelar](mainnet/Axelar/axelar.md)
