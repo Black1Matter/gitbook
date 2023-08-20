@@ -1,4 +1,7 @@
 # Table of contents
 
+* [README](README.md)
+
 ## MAINNET
-* [Axelar](MAINNET/Axelar/Snapshot.md)
+
+* [Axelar](mainnet/axelar.md)
