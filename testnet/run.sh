@@ -15,5 +15,5 @@ done
 
 cd $work_dir_path
 git add .
-git commit -m 'update'
+git commit -m 'updates snapshot mainnet'
 git push
