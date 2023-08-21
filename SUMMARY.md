@@ -6,5 +6,5 @@
 * [Agoric](mainnet/Agoric/snapshot.md)
     * [Snapshot](mainnet/Agoric/snapshot.md)
 
-* [Axelar](mainnet/Axelar/snapshot.md)
+* [Axelar](README.md)
     * [Snapshot](mainnet/Axelar/snapshot.md)
