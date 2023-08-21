@@ -1,8 +1,8 @@
 
 index_str=${1:-"3s"}
 data_link="https://s3.eu-central-1.amazonaws.com/w3coins.io/snapshots/band-mainnet/band_snapsot_latest.json"
-snap_link="https://s3.eu-central-1.amazonaws.com/w3coins.io/snapshots/band-mainnet/band_snapsot_latest.json"
-
+snap_link="https://s3.eu-central-1.amazonaws.com/w3coins.io/snapshots/band-mainnet/band_snapsot_latest.tar.lz4"
+memory=$(curl -sI $snap_link | grep -i Content-Length | awk '{print  $2 / (1024^3)}')
 
 json_file=$(curl -H GET $data_link | jq '.')
 echo $json_file | jq '.'
@@ -21,7 +21,7 @@ date_time=$(( (end_seconds - start_seconds) / 3600))
 echo $date_time
 
 
-changed_str="|   $height   |  $date_time hour | [Snapshot]($snap_link)  |"
+changed_str="|   $height   |  $date_time hour | [Snapshot ($(printf '%.1f' $memory) GB)]($snap_link)  |"
 
 
 sed -i "$index_str>.*>$changed_str>" snapshot.md

@@ -1,3 +1,3 @@
 |     Block   |     Age     |   Download  |
 | ----------- | ----------- | ----------- |
-|   351011   |  11 hour | [Snapshot](https://s3.eu-central-1.amazonaws.com/w3coins.io/snapshots/lava-testnet/lava_snapsot_latest.json)  |
+|   351011   |  11 hour | [Snapshot (0.3 GB)](https://s3.eu-central-1.amazonaws.com/w3coins.io/snapshots/lava-testnet/lava_snapsot_latest.tar.lz4)  |
