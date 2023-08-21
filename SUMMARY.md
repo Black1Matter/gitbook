@@ -3,7 +3,7 @@
 #* [README](README.md)
 
 ## MAINNET
-* [Agoric](mainnet/Agoric/snapshot.md)
+* [Agoric](READMEE.md)
     * [Snapshot](mainnet/Agoric/snapshot.md)
 
 * [Axelar](README.md)
