@@ -3,6 +3,5 @@
 * [README](README.md)
 
 ## MAINNET
-
-* [Agoric](mainnet/Agoric/agoric.md)
-* [Axelar](mainnet/Axelar/axelar.md)
+    * [Agoric](mainnet/Agoric/snapshot.md)
+    * [Axelar](mainnet/Axelar/snapshot.md)
