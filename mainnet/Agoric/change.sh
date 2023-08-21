@@ -8,16 +8,17 @@ data_link="https:\/\/s3.eu-central-1.amazonaws.com\/w3coins.io\/snapshots\/cosmo
 
 
 json_file=$(curl -H GET https://s3.eu-central-1.amazonaws.com/w3coins.io/snapshots/cosmos-mainnet/cosmos_snapsot_latest.json | jq '.')
-echo $json_file | jq '.'
+#echo $json_file | jq '.'
 
 height=$(echo $json_file| jq -r '.latest_block_height')
 
 
 echo "Get time"
 start_seconds=$(echo $(echo $json_file| jq -r '.latest_block_time') | cut -d'T' -f2 | cut -d'.' -f1)
-end_seconds=$(echo $(echo $json_file| jq -r '.earliest_block_time') | cut -d'T' -f2 | cut -d'.' -f1)
+#end_seconds=$(echo $(echo $json_file| jq -r '.earliest_block_time') | cut -d'T' -f2 | cut -d'.' -f1)
+utc_time=$(date -u +"%T")
 start_seconds=$(date -d "$start_time" +%s)
-end_seconds=$(date -d "$end_time" +%s)
+end_seconds=$(date -d "$utc_time" +%s)
 date_time=$(( (end_seconds - start_seconds) / 3600))
 
 echo $date_time
