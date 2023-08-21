@@ -26,8 +26,7 @@ echo $date_time
 changed_str="|   $height   |  $date_time hour | [Snapshot]($data_link)  |"
 
 
-sed -i "$index_str/.*/$changed_str/" file.txt
-
+sed -i "$index_str/.*/$changed_str/" axelar.md
 
 #sudo tee ./axelar.md > /dev/null << EOF
 #|     Block   |     Age     |   Download  |
