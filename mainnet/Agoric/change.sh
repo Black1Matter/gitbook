@@ -1,8 +1,8 @@
 # Axelar
 
-git pull
 
-index_str=3s
+
+index_str=${1:-"3s"}
 data_link="https:\/\/s3.eu-central-1.amazonaws.com\/w3coins.io\/snapshots\/cosmos-mainnet\/cosmos_snapsot_latest.json"
 
 
@@ -34,6 +34,3 @@ sed -i "$index_str/.*/$changed_str/" snapshot.md
 #|   $height   |  $date_time hour | [Snapshot]($data_link)  |
 #EOF
 
-git add .
-git commit -m 'update snapshot'
-git push
