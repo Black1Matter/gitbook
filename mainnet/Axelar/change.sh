@@ -1,5 +1,7 @@
 # Axelar
 
+git pull
+
 json_file=$(curl -H GET https://s3.eu-central-1.amazonaws.com/w3coins.io/snapshots/cosmos-mainnet/cosmos_snapsot_latest.json | jq '.')
 
 echo $json_file | jq '.'
@@ -24,3 +26,7 @@ sudo tee ./axelar.md > /dev/null << EOF
 | ----------- | ----------- | ----------- |
 |   $height   |  $date_time hour | [Snapshot]($data_link)  |
 EOF
+
+git add .
+git commit -m 'update snapshot'
+git push
