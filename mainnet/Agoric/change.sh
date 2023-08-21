@@ -1,14 +1,11 @@
-# Axelar
-
-
 
 index_str=${1:-"3s"}
-data_link="https:\/\/s3.eu-central-1.amazonaws.com\/w3coins.io\/snapshots\/cosmos-mainnet\/cosmos_snapsot_latest.json"
+data_link="https://s3.eu-central-1.amazonaws.com/w3coins.io/snapshots/agoric-mainnet/agoric_snapsot_latest.json"
+snap_link="https://s3.eu-central-1.amazonaws.com/w3coins.io/snapshots/agoric-mainnet/agoric_snapsot_latest.json"
 
 
-
-json_file=$(curl -H GET https://s3.eu-central-1.amazonaws.com/w3coins.io/snapshots/cosmos-mainnet/cosmos_snapsot_latest.json | jq '.')
-#echo $json_file | jq '.'
+json_file=$(curl -H GET $data_link | jq '.')
+echo $json_file | jq '.'
 
 height=$(echo $json_file| jq -r '.latest_block_height')
 
@@ -24,14 +21,8 @@ date_time=$(( (end_seconds - start_seconds) / 3600))
 echo $date_time
 
 
-changed_str="|   $height   |  $date_time hour | [Snapshot]($data_link)  |"
+changed_str="|   $height   |  $date_time hour | [Snapshot]($snap_link)  |"
 
 
-sed -i "$index_str/.*/$changed_str/" snapshot.md
-
-#sudo tee ./axelar.md > /dev/null << EOF
-#|     Block   |     Age     |   Download  |
-#| ----------- | ----------- | ----------- |
-#|   $height   |  $date_time hour | [Snapshot]($data_link)  |
-#EOF
+sed -i "$index_str>.*>$changed_str>" snapshot.md
 
