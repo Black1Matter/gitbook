@@ -23,7 +23,7 @@ time_hour=$((time_difference / 3600))
 echo "hour: $time_hour"
 
 
-changed_str="|   $height   |  $time_date hour | [Snapshot ($(printf '%.1f' $memory) GB)]($snap_link)  |"
+changed_str="|   $height   |  $time_hour hour | [Snapshot ($(printf '%.1f' $memory) GB)]($snap_link)  |"
 
 
 sed -i "$index_str>.*>$changed_str>" snapshot.md
